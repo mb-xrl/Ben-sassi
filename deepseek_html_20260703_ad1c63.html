@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEN SASSI | Men's Clothing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Modern Dark Elegance Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: #1a1a1a;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        .logo span {
+            color: #e0b14c; /* Elegant gold accent */
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            font-weight: 400;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #e0b14c;
+        }
+        .cta-btn {
+            background: #e0b14c;
+            color: #121212;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover {
+            transform: scale(1.05);
+            background: #fff;
+        }
+
+        /* Hero Section - Using front shop image */
+        .hero {
+            height: 90vh;
+            width: 100%;
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('image1.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        /* Shop Grid Section - Side view */
+        .collection {
+            padding: 80px 5%;
+            background: #181818;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        .section-header p {
+            color: #888;
+            margin-top: 10px;
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .shop-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .shop-image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        .shop-image-container:hover img {
+            transform: scale(1.03);
+        }
+        .shop-text {
+            padding: 20px;
+        }
+        .shop-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .shop-text ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .shop-text ul li {
+            background: #2a2a2a;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border-left: 2px solid #e0b14c;
+        }
+
+        /* Location Section - Planet */
+        .location {
+            padding: 80px 5%;
+            background: #121212;
+            text-align: center;
+        }
+        .location-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .location-image {
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .location-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .location-details {
+            max-width: 400px;
+            text-align: left;
+        }
+        .location-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #e0b14c;
+            margin-bottom: 15px;
+        }
+        .location-details p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 5%;
+            background: #1a1a1a;
+            border-top: 1px solid #333;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        footer span {
+            color: #e0b14c;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .shop-grid { grid-template-columns: 1fr; }
+            .location-image { width: 100%; }
+            .location-details { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">BEN <span>SASSI</span></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Collection</a>
+            <a href="#">About</a>
+            <a href="#" class="cta-btn">Visit Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Front Image) -->
+    <header class="hero">
+        <h1>MOHSEN BEN SASSI</h1>
+        <p>Refined men's tailoring and contemporary fashion located in the heart of Monastir. Experience style that speaks volumes.</p>
+        <a href="#" class="cta-btn">Discover Collection</a>
+    </header>
+
+    <!-- Shop Showcase (Side Image) -->
+    <section class="collection">
+        <div class="section-header">
+            <h2>Modern Menswear</h2>
+            <p>Exquisite fabrics, perfect fits, and timeless designs.</p>
+        </div>
+        
+        <div class="shop-grid">
+            <div class="shop-image-container">
+                <img src="image2.png" alt="BEN SASSI Side Shop Display">
+                <div style="position:absolute; bottom:20px; left:20px; background:rgba(0,0,0,0.7); padding:10px 20px; border-radius:5px; border-left:3px solid #e0b14c;">
+                    <p style="font-size:0.9rem; margin:0;">2026 Collection</p>
+                </div>
+            </div>
+            <div class="shop-text">
+                <h3>Tailored to Perfection</h3>
+                <p>From sharp business suits to relaxed weekend wear, our curated collection is designed for the modern man. Come browse our racks and find your new signature look.</p>
+                <br>
+                <ul>
+                    <li>Suits & Blazers</li>
+                    <li>Casual Shirts</li>
+                    <li>Premium Denim</li>
+                    <li>Accessories</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Highlight (Planet Image) -->
+    <section class="location">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Find Us in Monastir</h2>
+        <p style="color:#888; margin-top:10px;">A landmark destination right by the city's most famous roundabout.</p>
+        
+        <div class="location-container">
+            <div class="location-image">
+                <img src="planet.png" alt="Planet Roundabout Monastir">
+            </div>
+            <div class="location-details">
+                <h3>The Planet Rond-Point</h3>
+                <p>Located just steps away from the iconic Planet roundabout, BEN SASSI is easily accessible for locals and visitors alike.</p>
+                <br>
+                <p><strong>Address:</strong><br>
+                Avenue de la République,<br>
+                Monastir, Tunisia</p>
+                <br>
+                <p style="color: #e0b14c; font-weight: 600;">Open Mon-Sat: 9:00 AM - 7:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <span>BEN SASSI</span> Men's Clothing. All rights reserved.</p>
+        <p style="margin-top:10px;">Monastir, Tunisia.</p>
+    </footer>
+
+</body>
+</html>
